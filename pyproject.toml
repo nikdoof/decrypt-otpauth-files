@@ -1,0 +1,14 @@
+[project]
+name = "decrypt-otpauth-files"
+version = "1.0.0"
+description = "A tool for decrypting the encrypted backups/account files created by OTP Auth for iOS"
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "bpylist2>=4.1.1",
+    "click>=8.2.1",
+    "pycryptodome>=3.23.0",
+    "pyqrcode>=1.2.1",
+    "rncryptor>=3.3.0",
+]

@@ -4,10 +4,12 @@ This tool allows for decrypting the encrypted backups/account files created by [
 
 If you find problems with the file format (in particular security related issues), do not hesitate and file an issue.
 
+This is a fork of the original repository at [CooperRS/decrypt-otpauth-files](https://github.com/CooperRS/decrypt-otpauth-files) with a aim to get the script working out of the box with modern Python versions.
+
 ## Requirements
 
-  - [Python 3.7](https://www.python.org/downloads/)
-  - [pipenv](https://github.com/pypa/pipenv)
+  - [Python 3.12](https://www.python.org/downloads/)
+  - [uv](https://astral.sh/uv)
   - An encrypted OTP Auth backup/account file
 
 ## Usage
@@ -21,20 +23,20 @@ cd decrypt-otpauth-files
 
 2. Install dependencies
 
-```
-pipenv install
+```shell-session
+$ uv sync
 ```
 
 3. Decrypt your OTP Auth file
 
-```
+```shell-session
 # Decrypt a full backup file
-pipenv run python decrypt_otpauth.py decrypt_backup --encrypted-otpauth-backup <path to your OTP Auth backup>
+$ uv run python decrypt_otpauth.py decrypt_backup --encrypted-otpauth-backup <path to your OTP Auth backup>
 ```
 
-```
+```shell-session
 # Decrypt a single account export
-pipenv run python decrypt_otpauth.py decrypt_account --encrypted-otpauth-account <path to your OTP Auth account>
+$ uv run python decrypt_otpauth.py decrypt_account --encrypted-otpauth-account <path to your OTP Auth account>
 ```
 
 ## Demo
